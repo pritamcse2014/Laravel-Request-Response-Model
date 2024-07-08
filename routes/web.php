@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{name}/{age}', [DemoController::class, 'DemoAction']);
+Route::get('/hello', [DemoController::class, 'DemoAction']);
+Route::get('/hello2', [DemoController::class, 'DemoAction2']);
+Route::post('/hello3', [DemoController::class, 'DemoAction3']);

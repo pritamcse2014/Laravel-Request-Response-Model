@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {   
-    function DemoAction(Request $request):array {
-        return $request->getAcceptableContentTypes();
+    function DemoAction(Request $request):string {
+        if ($request->accepts(['text/html'])) {
+            return "true";
+        } else {
+            return false;
+        }
     }
 }

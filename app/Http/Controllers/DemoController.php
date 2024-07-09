@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {   
-    function DemoAction(Request $request):string {
-        return $request->ip();
+    function DemoAction(Request $request):array {
+        return $request->getAcceptableContentTypes();
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {   
-    function DemoAction(Request $request):array {
-        return $request->cookie();
+    function DemoAction(Request $request):string {
+        return $request->cookie('Cookie_1');
     }
 }

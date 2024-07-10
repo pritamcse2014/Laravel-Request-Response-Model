@@ -7,22 +7,10 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {   
     function DemoAction() {
-        $name = "token";
-        $value = "123XYZ";
-        $minutes = 120;
-        $path = "/";
-        $domain = $_SERVER['SERVER_NAME'];
-        $secure = false;
-        $httpOnly = true;
-
-        return response('Hi')->cookie(
-            $name,
-            $value,
-            $minutes,
-            $path,
-            $domain,
-            $secure,
-            $httpOnly,
-        );
+        return response('Hello1')
+            ->header('key1', 'value1')
+            ->header('key2', 'value2')
+            ->header('key3', 'value3')
+            ->header('key4', 'value4');
     }
 }

@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {   
-    function DemoAction(Request $request):JsonResponse {
-        $code = 201;
-        $content = array('name' => 'Pritam', 'city' => 'London');
-        return response()->json($content, $code);
+    function DemoAction1():string {
+        return redirect('/hello2');
+    }
+    
+    function DemoAction2():string {
+        return 'hello2';
     }
 }

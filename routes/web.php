@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/hello', [DemoController::class, 'DemoAction']);
+Route::get('/hello1', [DemoController::class, 'DemoAction1']);
+Route::get('/hello2', [DemoController::class, 'DemoAction2']);

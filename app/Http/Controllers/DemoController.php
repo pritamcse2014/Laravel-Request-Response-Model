@@ -6,13 +6,23 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {   
-    function FileBinary() {
-        $filePath = "upload/image/circle.png";
-        return response()->file($filePath);
-    }
-    
-    function FileDownload() {
-        $filePath = "upload/image/circle.png";
-        return response()->download($filePath);
+    function DemoAction() {
+        $name = "token";
+        $value = "123XYZ";
+        $minutes = 120;
+        $path = "/";
+        $domain = $_SERVER['SERVER_NAME'];
+        $secure = false;
+        $httpOnly = true;
+
+        return response('Hi')->cookie(
+            $name,
+            $value,
+            $minutes,
+            $path,
+            $domain,
+            $secure,
+            $httpOnly,
+        );
     }
 }

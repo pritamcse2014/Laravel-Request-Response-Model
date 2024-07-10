@@ -19,5 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/fileBinary', [DemoController::class, 'FileBinary']);
-Route::get('/fileDownload', [DemoController::class, 'FileDownload']);
+Route::get('/demoAction', [DemoController::class, 'DemoAction']);
